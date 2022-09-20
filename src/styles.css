@@ -1,1 +1,153 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --fuenteNav:  'Kanit', sans-serif, 'Krub', sans-serif, 'Open Sans', sans-serif;
+}
+
+body{
+    font-family: var(--fuenteNav);
+    background-color: #525252;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+
+/* Banner */
+.contenedor-banner{
+    width: 100%;
+    height: 500px;
+}
+.font-text-banner{
+    font-size: 64px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+}
+.font-text-banner-secondary {
+    font-size: 32px;
+}
+.contenedor-banner-dark {
+    height: 90%;
+}
+.contenedor-banner-blue{
+    height: 10%;
+    background-color: rgba(17, 248, 248, 0.795);
+    margin-top: 0;
+
+}
+/* Imagen de Perfil */
+.div-img{
+    display: inline-block;
+    height: 230px;
+    width: 230px;
+    text-align: center;
+}
+.img-perfil{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 8px solid white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* Contenedores */
+.contenedor-margin {
+    margin-top: 3rem;   
+}
+.contenedor-margin h2{
+    font-weight: 700;
+    font-style: italic;
+}
+/* Card personalizado */
+.card-fondo {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 12px 12px 20px rgb(148, 145, 145),
+                -12px -12px 20px rgb(216, 214, 214);
+}
+.card-custom {
+    background-color: #f7f1f1;
+    transition: 
+    border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s,
+    transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.card-custom p{
+    width: 90%;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}   
+.card-custom:hover {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transition: all 1.2s;
+    transform: scale(1.07);
+    margin-top: 20px;
+}
+.card-title {
+    font-weight: 700; 
+    color: #ffffff;   
+}
+.titulos-card{
+    display: flex;
+    justify-content: end;
+}
+.card-titulos-mod{
+    display: flex;
+    justify-content: space-between;
+
+}
+.card-titulos-mod h3{
+    font-weight: 700;
+}
+.card-laboral{
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+}
+.card-text-size {
+    font-size: 24px;
+    text-align: justify;
+}
+/* Link o botones personalizados */
+.link-custom{
+    color: dimgray;
+    margin-right: 20px;
+}
+.link-custom:hover{
+    color: black;
+}
+/* Lista datos personales*/
+.item-custom {
+    font-size: 24px;
+}
+/* Educacion y Cursos */
+.card-edu-custom{
+    font-size: 24px;
+    color: #3d72b4;
+}
+.card-proyecto-custom{
+    font-size: 32px;
+    font-weight: 700;
+    color: #3d72b4;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    background-color: #212121;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.contenedor-footer h6, span{
+    color: #ffffff;
+    padding: 10px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
