@@ -2,10 +2,10 @@
 <div class="row  text-center">
     <div class="col-sm-12">
         <div class=" bg-dark text-white contenedor-banner-dark contenedor-banner">
-            <h1 class="font-text-banner pt-5 pb-3">Pablo Mauricio Nodari</h1>
-            <h2 class="font-text-banner-secondary">Desarrollador Full Stack Junior</h2>
+            <h1 class="font-text-banner pt-5 pb-3">{{myPortfolio.name_banner}}</h1>
+            <h2 class="font-text-banner-secondary">{{myPortfolio.position}}</h2>
             <div class="div-img">
-                <img class="rounded-circle img-perfil" src="../assets/img/cvperfil.jpg" alt="foto de perfil">
+                <img class="rounded-circle img-perfil" [src]="myPortfolio.img_perfil" alt="foto de perfil">
             </div> 
         </div>
     <div class="contenedor-banner-blue"></div>

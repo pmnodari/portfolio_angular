@@ -1,0 +1,56 @@
+Pasos:
+-Instalado Angular, creamos la App con ng new "nombre app"
+-Genera las carpetas y componentes iniciales
+-Luego crearemos los componentes que requiere nuestra App, como si fuera un rompecabeza con el comando ng g c "componentes/nombre componentes"
+-Tambien aprovechamos e instalamos bootstrap si vamos a utilizar este framework. npm install bootstrap, y adicional tenemos que ir a angular.json y agregar las rutas a bootstrap.css , y al script.
+"node_modules/bootstrap/dist/css/bootstrap.css"
+"node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+
+-Tambien que todo recurso img que se quiera agregar al proyecto de forma local hay que colocarlo en la carpeta assets.
+-Recordar que los componente link, ya sea de fuente, o de bootstrap y los script van a ser llamado del index.html de la App.
+-Pero como queremos que nuestra App los datos sean consumido a traves de un servicio para hacer la pagina dinamica, debemos crear ese servcio con ng g s "servicios/nombre servcio". Este sera un @Injectable.
+El servicio crea una clase decorado por @Injectable. Esto quiere decir que sera "inyectado" en cada componente para que estos puedan acceder a los datos que se requiere.
+En este ejemplo los datos seran consumido a traves de este servicio portfolio. 
+Para ello hay que importar el servicio y declararlo en el constructor del componente que se este inyectando, para luego llamar a esa instancia y acceder al o los metodos definido en el servicio.
+
+-Hasta aqui se ve que es un servicio y como los componentes pueden acceder a él, a traves de la inyeccion. Pero para acceder a los datos, y unas de las mas populares es a traves de la llamadas HTTP. Las mismas sirven para recibir y enviar datos al servidor. 
+Para esto Angular nos provee un modulo que se llama httpClient.
+Los metodos que nos ofrece son:
+    GET-> Nos permite recupera los recursos del servidor o datos, y si la respuesta es positiva el servidor nos regresa la info ya sea en formato json, html u otro, y si la respuesta es negativa nos devuelve un 404 "recurso no encontrado" o 400 "Problema o error en el request"
+
+    POST->Permite crear o ejecutar acciones en el recursos del servidor. Generalmente se usa este metodo cuando enviamos un formulario al servidor. Si el recurso fue creado nos devuelve un 201
+
+    PUT->Este permite modificar los recursos del servidor, aunque tambien es posibles crearlos. La respuesta tambien va ser 201 si fue todo satisfactorio, o 204 si no lo fue.
+
+    DELETE->Permite eliminar los recursos del servidor.
+
+-En el proyecto incorporamos este modulo. Para obtener los datos del portfolio y no queden los mismos hardcodeados., y hace la App mas dinamica.
+-Para acceder a los metodo http tenemos que import en al app.module el httpClientModule, y especificarlo en el imports. Y una vez echo esto, se debe inyectar en el servicio creado que es el que se encargara de manejar los datos. Tener en cuenta que cuando se habla de inyectar, lo que queremos decir, es especificarlo en el constructor.
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+private http:HttpClient -> parametro en el constructor
+
+Adicional tambien se requiere de la clase del Observable: import { Observable } from 'rxjs';
+Son una coleccion de futuros eventos a lo que  vamos a susbcribir, y luego nos llegaran de forma asincronas. 
+Por lo que ahora, se va a depender de un servidor, y no se quiere detener la app, se definen los metodos como Observable.
+
+-obtenerDatos(): Observable<any>{
+    return this.http.get('json');
+}
+La idea que el json que se define es una url con la cual nos vamos a comunicar, es decir, vamos a enviar un request, y se van a obtener los datos. Pero en nuestro casos se accederan a un JSON creado por nosotros de forma local. El mismo estara ubicado en la carpeta asset/data. 
+
+-Una vez configurado el JSON de nuestro proyecto, y verificar que estamos accediendo al mismo, estamos en condiciones de acceder de forma dinamica al nuestro json e interpolar los datos de este en el template.
+Para ello, debemos guardar el objeto json en una variable, para luego poder acceder a los distintos datos segun necesitemos.
+
+-Tener en cuenta que cuando usamos un string el databinding es el adecuado {{myPortfolio.name_banner}} pero para las imagenes no, lo que se usa en este caso es el property binding. El cual se pone  [src]="myPortfolio.img_perfil"
+
+-Cuando en el JSON tenemos una array, lo que se hace es recorrer lo. Y para ello se utiliza la directiva *ngFor en el template html del componente. Basicamente lo que se hace es lo siguiente: Si el componente esta consumiendo datos de un servicio creado, data.json, debemos importarlo para acceder a los metodos que estan en él. Luego en la clase ts del componente aquel se crea una variable que alojara la info que obtenemos al susbcribirnos.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+{
+    "name_encabezado":"Pablo Nodari",
+    "name_banner":"Pablo Mauricio Nodari",
+    "position":"Desarrollador Full Stack Junior",
+    "img_perfil":"../assets/img/cvperfil.jpg",
+    "about":"Soy licenciado en Economía, pero un gran apasionado de la tecnología y el desarrollo. Esto me llevo a incursionar en el mundo de la programación, dando mis primeros pasos en el desarrollo de App para android. Pero mi gran interés es el desarrollo web, y es donde mi foco y dedicación estan arraigado. Por obvia razones, la oportunidad de trabajar y perfeccionarme en este mundo son mi prioridad.",
+    "data_persons":[{
+        "cuil":"20-29126979-7",
+        "fecha_nacimiento":"28/05/1982",
+        "edad":"40",
+        "nacionalidad":"Agentino",
+        "estado_civil":"Pareja"
+    }],
+    "schools":[
+        {
+            "name_school":"Universidad Nacional de Cuyo",
+            "title":"Licenciado en Economía",
+            "condition":"Finalizado"
+        },
+        {
+            "name_school":"Argentina Programa",
+            "title":"Desarrollador Full Stack Junior",
+            "condition":"Finalizado"
+        },
+        {
+            "name_school":"Universidad Austral",
+            "title":"Desarrollo Sitio Web",
+            "condition":"Finalizado"
+        },
+        {
+            "name_school":"Plataforma Udemy",
+            "title":"Desarrollo y diseño responsivo de Sitios Web",
+            "condition":"Finalizado"
+        }
+    ],
+    "experience":[
+        {
+            "company":"Sun Plaza Mendoza",
+            "position":"Supervisor de Cajas",
+            "start":"",
+            "end":"Actualmente",
+            "description":"Control, custodia y manejo de valores, tanto efectivo como divisas. Dirección y gestión de personal a cargo. Confección de balances, y presentación de reportes. Manejo de clientes y resolución de conflictos.",
+            "achievements":"Llevar a cabo un sector con personas a cargo, con el fin de lograr los objetivos gerenciales. Resolución de conflicto o desafios que se presenta diariamente. Perfeccionamiento en el manejo de dinero y divisas. Amplitud de la perspectiva de trabajo."
+        },
+        {
+            "company":"Freelancer independiente",
+            "position":"Desarrollador Full Stack Junior",
+            "start":"",
+            "end":"Actualmente",
+            "description":"Elaboración de proyectos de diseño Web responsivo. Aplicación de herramientas para el diseño y desarrollo de sitios y App Web. Manejo de HTML, CSS, y JavaScript. Ademas de Bases de datos, y algunos framework como Angular y Bootstrap.",
+            "achievements":"Manejo de herramientas de desarrollo como HTML, y CSS. Lenguajes de programación como JavaScript, Java, y algunos adicionales como Kotlin, y Ruby."
+        },
+        {
+            "company":"EvalueConsulting",
+            "position":"Analista económico Junior",
+            "start":"2001",
+            "end":"2007",
+            "description":"Investigación y desarrollo de informes económico. Recopilación, filtración y manipulación de datos cuantitativos y cualitativos relevante a cada proyecto.",
+            "achievements":"Perfeccionar el pensamiento económico, y las relaciones en la vida real. Establecer las abstracciones necesarias para llegar a las conclusiones y recomendaciones económicas propias a cada proyecto."
+        }
+    ],
+    "skill":[
+        {
+            "name_skill":"JavaScript",
+            "progress":"width: 75%"
+        },
+        {
+            "name_skill":"HTML",
+            "progress":"width: 90%"
+        },
+        {
+            "name_skill":"CSS",
+            "progress":"width: 80%"
+        },
+        {
+            "name_skill":"Kotlin - Java - Ruby",
+            "progress":"width: 50%"
+        }        
+    ],
+    "project":[
+        {
+            "name_project":"Tienda on Line",
+            "description":"Sitio Web donde se muestra los producto, lo cuales puedes ser adquirido por los usuarios que naveguen en la plataforma."
+        },
+        {
+            "name_project":"Blog de Cafe",
+            "description":"Blog que tiene como tematica el Cafe. Donde el usuario podra descubrir los diferentes tipo de Cafe, conocer sobre su texturas y aromas. Como asi tambien la diversidad de recetas."
+        }
+    ]
+
+}

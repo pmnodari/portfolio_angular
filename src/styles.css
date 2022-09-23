@@ -124,6 +124,10 @@ body{
     font-size: 24px;
 }
 /* Educacion y Cursos */
+.lista-custom{
+    list-style: none;
+    margin-right: 2rem;
+}
 .card-edu-custom{
     font-size: 24px;
     color: #3d72b4;

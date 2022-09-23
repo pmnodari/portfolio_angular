@@ -13,12 +13,12 @@
             </a>
           </div>
           <div class="card-text">
-            <ul>
-              <li class="item-custom"><strong>Cuil:</strong> 20-29126979-7</li>
-              <li class="item-custom"><strong>Fecha de nacimiento:</strong> 28/05/1982</li>
-              <li class="item-custom"><strong>Edad:</strong> 40 años</li>
-              <li class="item-custom"><strong>Nacionalidad:</strong> Argentino</li>
-              <li class="item-custom"><strong>Estado Civil:</strong> Pareja</li>
+            <ul class="lista-custom">
+              <li class="item-custom" *ngFor="let dato of datosPersonalesList"><strong>Cuil:</strong> {{dato.cuil}}</li>
+              <li class="item-custom" *ngFor="let dato of datosPersonalesList"><strong>Fecha de nacimiento:</strong> {{dato.fecha_nacimiento}}</li>
+              <li class="item-custom" *ngFor="let dato of datosPersonalesList"><strong>Edad:</strong> {{dato.edad}} años</li>
+              <li class="item-custom" *ngFor="let dato of datosPersonalesList"><strong>Nacionalidad:</strong> {{dato.nacionalidad}}</li>
+              <li class="item-custom" *ngFor="let dato of datosPersonalesList"><strong>Estado Civil:</strong> {{dato.estado_civil}}</li>
             </ul>
           </div>
           <div class="text-end">
